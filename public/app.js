@@ -10,6 +10,9 @@ function affiche (){
 //déclenchement de la fonction si la requête réussi
 		success : function(result){
 			alert(result);
+			if (result == 'succes') {
+				location.href="myAccount.html";
+			}
 		}
 	});
 };

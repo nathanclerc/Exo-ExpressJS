@@ -1,6 +1,7 @@
 //chargement des librairies js
 var express = require('express');
 var bodyParser = require('body-parser');
+
 var app = express();
 
 //création de la variable result
@@ -40,7 +41,7 @@ app.post('/auth', function(req,res) {
 	console.log(logs);
 	console.log(user.login);
 //comparaison des inputs avec la base de données
-	if (logs[0].login === user.login || logs[0].password === user.mdp) {
+	if (logs[0].login === user.login && logs[0].mdp === user.mdp) {
 
 		console.log('success');
 
